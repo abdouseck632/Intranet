@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="{{ url_for('home') }}">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdvbOb7dNuYB1ALmSCt7YHwnCWPDp7hNQc-g&s" alt="Logo Laboratoire">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="left-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('home') }}"><i class="bi bi-house-door me-1"></i> Accueil</a>
+                    </li>
+                    <li class="nav-item" hidden>
+                        <a class="nav-link" href="{{ url_for('seminaires') }}"><i class="bi bi-calendar-event me-1"></i> Séminaires</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('invites') }}"><i class="bi bi-people me-1"></i> Invités</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-links">
+                <a href="{{ url_for('logout') }}" class="deconnexion"><i class="bi bi-door-open me-1"></i> Déconnexion</a>
+            </div>
+        </div>
+    </div>
+</nav>

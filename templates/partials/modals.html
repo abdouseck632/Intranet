@@ -1,0 +1,423 @@
+<!-- Modals -->
+    <!-- Modal Alias Email -->
+    <div class="modal fade" id="aliasModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="bi bi-at me-2"></i>Liste des alias email</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Alias</th>
+                                    <th>Destinataires</th>
+                                    <th>Utilisation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>direction@lab.fr</td>
+                                    <td>Directeur, Directeur adjoint</td>
+                                    <td>Questions de direction</td>
+                                </tr>
+                                <tr>
+                                    <td>admin@lab.fr</td>
+                                    <td>Équipe administrative</td>
+                                    <td>Questions administratives</td>
+                                </tr>
+                                <tr>
+                                    <td>seminaires@lab.fr</td>
+                                    <td>Comité des séminaires</td>
+                                    <td>Organisation des séminaires</td>
+                                </tr>
+                                <tr>
+                                    <td>info@lab.fr</td>
+                                    <td>Service informatique</td>
+                                    <td>Problèmes techniques</td>
+                                </tr>
+                                <tr>
+                                    <td>rh@lab.fr</td>
+                                    <td>Responsable RH</td>
+                                    <td>Questions RH</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal DNUM Incident -->
+    <div class="modal fade" id="dnumModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="bi bi-exclamation-triangle me-2"></i>Déclaration d'incident</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="incidentType" class="form-label">Type d'incident</label>
+                            <select class="form-select" id="incidentType">
+                                <option selected>Choisir...</option>
+                                <option>Matériel défectueux</option>
+                                <option>Problème réseau</option>
+                                <option>Logiciel défaillant</option>
+                                <option>Sécurité</option>
+                                <option>Autre</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="incidentDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="incidentDescription" rows="3" placeholder="Décrivez l'incident en détails..."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="incidentUrgency" class="form-label">Urgence</label>
+                            <select class="form-select" id="incidentUrgency">
+                                <option>Normal</option>
+                                <option selected>Important</option>
+                                <option>Critique</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="incidentContact" class="form-label">Vos coordonnées</label>
+                            <input type="email" class="form-control" id="incidentContact" placeholder="email@lab.fr">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary">Envoyer la déclaration</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Hygiène & Sécurité -->
+    <div class="modal fade" id="hygieneModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="bi bi-shield-check me-2"></i>Consignes de sécurité</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="accordion" id="safetyAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    <i class="bi bi-fire me-2"></i>Incendie
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#safetyAccordion">
+                                <div class="accordion-body">
+                                    <h6>Procédure en cas d'incendie :</h6>
+                                    <ol>
+                                        <li>Donner l'alerte en composant le 18</li>
+                                        <li>Actionner le bouton d'alarme le plus proche</li>
+                                        <li>Évacuer immédiatement les locaux</li>
+                                        <li>Ne pas utiliser les ascenseurs</li>
+                                        <li>Se rassembler au point de rassemblement (parking Est)</li>
+                                    </ol>
+                                    <div class="alert alert-warning mt-3">
+                                        <i class="bi bi-exclamation-triangle"></i> Les extincteurs sont situés près des issues de secours
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <i class="bi bi-exclamation-triangle me-2"></i>Évacuation
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#safetyAccordion">
+                                <div class="accordion-body">
+                                    <h6>Plan d'évacuation :</h6>
+                                    <ul>
+                                        <li>Les issues de secours sont signalées par des panneaux lumineux</li>
+                                        <li>Les responsables d'évacuation portent des chasubles fluorescentes</li>
+                                        <li>Exercice d'évacuation trimestriel obligatoire</li>
+                                    </ul>
+                                    <img src="https://via.placeholder.com/600x200?text=Plan+d'évacuation" alt="Plan d'évacuation" class="img-fluid mt-3 rounded">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="bi bi-file-earmark-medical me-2"></i>Premiers secours
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#safetyAccordion">
+                                <div class="accordion-body">
+                                    <h6>Personnes formées aux premiers secours :</h6>
+                                    <ul>
+                                        <li>Marie Dupont (bureau 204)</li>
+                                        <li>Jean Martin (bureau 312)</li>
+                                        <li>Sophie Lambert (bureau 105)</li>
+                                    </ul>
+                                    <p class="mt-3">Les trousses de premiers secours sont situées :</p>
+                                    <ul>
+                                        <li>Accueil principal</li>
+                                        <li>Salle de pause</li>
+                                        <li>Près des extincteurs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">J'ai compris</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Conseil de Laboratoire -->
+    <div class="modal fade" id="conseilModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="bi bi-people-fill me-2"></i>Conseil de Laboratoire</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="border-bottom pb-2">Membres permanents</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Pr. Jean Dupont</div>
+                                        Directeur du laboratoire
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">204</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Dr. Marie Martin</div>
+                                        Directrice adjointe
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">202</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Dr. Thomas Leroy</div>
+                                        Responsable administratif
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">101</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="border-bottom pb-2">Membres élus</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Dr. Sophie Lambert</div>
+                                        Représentante chercheurs
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">312</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Dr. Pierre Garnier</div>
+                                        Représentant enseignants
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">215</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">M. Alain Petit</div>
+                                        Représentant personnel
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">103</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h6 class="border-bottom pb-2">Prochaines réunions</h6>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">Réunion plénière</h6>
+                                    <small class="text-muted">15/10/2024</small>
+                                </div>
+                                <p class="mb-1">Salle de conférence - 14h00</p>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">Commission recherche</h6>
+                                    <small class="text-muted">22/10/2024</small>
+                                </div>
+                                <p class="mb-1">Salle 204 - 10h00</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary">Voir l'ordre du jour</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tous les PDF -->
+    <div class="modal fade" id="allPdfModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="bi bi-archive me-2"></i>Tous les documents PDF</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- Catégorie 1 -->
+                        <div class="col-md-6 mb-4">
+                            <h5 class="border-bottom pb-2 mb-3" style="color: var(--primary-medium);">
+                                <i class="bi bi-file-earmark-text me-2"></i>Documents administratifs
+                            </h5>
+                            <div class="list-group">
+                                <a href="docs/livret-accueil.pdf" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download>
+                                    Livret d'accueil CEREMADE
+                                    <span class="badge bg-primary rounded-pill">2.4 Mo</span>
+                                </a>
+                                <a href="docs/reglement-interieur.pdf" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download>
+                                    Règlement Intérieur
+                                    <span class="badge bg-primary rounded-pill">1.8 Mo</span>
+                                </a>
+                                <a href="docs/politique-voyage.pdf" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download>
+                                    Politique de voyage
+                                    <span class="badge bg-primary rounded-pill">0.9 Mo</span>
+                                </a>
+                                <a href="docs/procedures-cnrs.pdf" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download>
+                                    Procédures CNRS
+                                    <span class="badge bg-primary rounded-pill">1.5 Mo</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Catégorie 2 -->
+                        <div class="col-md-6 mb-4">
+                            <h5 class="border-bottom pb-2 mb-3" style="color: var(--primary-medium);">
+                                <i class="bi bi-laptop me-2"></i>Ressources informatiques
+                            </h5>
+                            <div class="list-group">
+                                <a href="docs/service-info.pdf" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download>
+                                    Service Informatique
+                                    <span class="badge bg-primary rounded-pill">3.1 Mo</span>
+                                </a>
+                                <a href="docs/charte-info.pdf" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download>
+                                    Charte Informatique
+                                    <span class="badge bg-primary rounded-pill">1.2 Mo</span>
+                                </a>
+                                <a href="docs/dfis.pdf" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download>
+                                    Document DFIS
+                                    <span class="badge bg-primary rounded-pill">2.7 Mo</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Catégorie 3 -->
+                        <div class="col-md-6 mb-4">
+                            <h5 class="border-bottom pb-2 mb-3" style="color: var(--primary-medium);">
+                                <i class="bi bi-shield-check me-2"></i>Hygiène & Sécurité
+                            </h5>
+                            <div class="list-group">
+                                <a href="docs/consignes-securite.pdf" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download>
+                                    Consignes de sécurité
+                                    <span class="badge bg-primary rounded-pill">1.1 Mo</span>
+                                </a>
+                                <a href="docs/plan-evacuation.pdf" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download>
+                                    Plan d'évacuation
+                                    <span class="badge bg-primary rounded-pill">2.3 Mo</span>
+                                </a>
+                                <a href="docs/rapport-securite.pdf" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download>
+                                    Rapport annuel sécurité
+                                    <span class="badge bg-primary rounded-pill">3.5 Mo</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Catégorie 4 -->
+                        <div class="col-md-6 mb-4">
+                            <h5 class="border-bottom pb-2 mb-3" style="color: var(--primary-medium);">
+                                <i class="bi bi-people me-2"></i>Instances du laboratoire
+                            </h5>
+                            <div class="list-group">
+                                <a href="docs/composition-conseil.pdf" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download>
+                                    Composition du Conseil
+                                    <span class="badge bg-primary rounded-pill">0.8 Mo</span>
+                                </a>
+                                <a href="docs/proces-verbal.pdf" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download>
+                                    Procès-verbaux (2024)
+                                    <span class="badge bg-primary rounded-pill">4.2 Mo</span>
+                                </a>
+                                <a href="docs/elections.pdf" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download>
+                                    Règlement des élections
+                                    <span class="badge bg-primary rounded-pill">1.6 Mo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-download" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Modal Détails Séminaire -->
+<div class="modal fade" id="seminaireDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content overflow-hidden">
+            <div class="modal-header" id="detailHeader">
+                <h5 class="modal-title" id="detailTitle"></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-person-circle me-2" style="font-size: 1.2rem;"></i>
+                    <span id="detailSpeaker" class="fw-medium"></span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-calendar-event me-2" style="font-size: 1.2rem;"></i>
+                    <span id="detailDateTime"></span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-geo-alt me-2" style="font-size: 1.2rem;"></i>
+                    <span id="detailLocation"></span>
+                </div>
+                
+                <div class="d-flex align-items-center mb-4">
+                    <i class="bi bi-clock me-2" style="font-size: 1.2rem;"></i>
+                    <span id="detailDuration"></span> minutes
+                </div>
+                
+                <div class="card bg-light p-3">
+                    <h6 class="mb-2"><i class="bi bi-card-text me-2"></i>Description</h6>
+                    <p id="detailDescription" class="mb-0"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-circle me-1"></i> Fermer
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

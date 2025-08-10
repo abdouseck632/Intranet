@@ -1,0 +1,214 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<!-- Bannière avec carousel -->
+    <div class="gradient-bg text-white">
+        <div id="labCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#labCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#labCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#labCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="Laboratoire">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Ressources du Laboratoire</h3>
+                        <p>Accédez à tous les documents et services en un clic</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="Équipe">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Un environnement de travail collaboratif</h3>
+                        <p>Découvrez nos équipes et projets</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1509869175650-a1d97972541a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Recherche">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Excellence en recherche mathématique</h3>
+                        <p>Explorez nos dernières publications</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#labCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#labCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+    
+
+    <!-- Contenu principal -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Colonne de gauche - Thèmes -->
+            <div class="col-lg-8">
+                <div class="section-divider">
+                    <span class="section-divider-text">Services et Ressources</span>
+                </div>
+                
+                <!-- Ressources Informatiques -->
+                <div class="theme-section animate-card delay-1">
+                    <div class="section-header">
+                        <i class="bi bi-laptop"></i>
+                        <span>Ressources Informatiques</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn-theme" data-bs-toggle="modal" data-bs-target="#aliasModal">
+                                    <i class="bi bi-at"></i>
+                                    <span>Liste des alias email</span>
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="btn-theme" href="https://doc.lab.fr" target="_blank">
+                                    <i class="bi bi-exclamation-triangle"></i>
+                                    <span>Déclarer un incident</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="https://doc.lab.fr" class="btn-theme" target="_blank">
+                                    <i class="bi bi-book"></i>
+                                    <span>Documentation</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="https://video.lab.fr" class="btn-theme" target="_blank">
+                                    <i class="bi bi-play-circle"></i>
+                                    <span>Vidéos tutoriels</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hygiène & Sécurité -->
+                <div class="theme-section animate-card delay-2">
+                    <div class="section-header">
+                        <i class="bi bi-shield-check"></i>
+                        <span>Hygiène & Sécurité</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <button class="btn-theme" data-bs-toggle="modal" data-bs-target="#hygieneModal">
+                                    <i class="bi bi-file-text"></i>
+                                    <span>Consignes</span>
+                                </button>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn-theme">
+                                    <i class="bi bi-people"></i>
+                                    <span>Chargés d'évacuation</span>
+                                </button>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn-theme">
+                                    <i class="bi bi-file-earmark-medical"></i>
+                                    <span>Rapports</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instances du laboratoire -->
+                <div class="theme-section animate-card delay-3">
+                    <div class="section-header">
+                        <i class="bi bi-building"></i>
+                        <span>Instances du laboratoire</span>
+                    </div>
+                    <div class="section-body">
+                        <button class="btn-theme" data-bs-toggle="modal" data-bs-target="#conseilModal">
+                            <i class="bi bi-person-lines-fill"></i>
+                            <span>Composition du Conseil</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Colonne de droite - PDF -->
+            <div class="col-lg-4 pdf-column">
+                <div class="animate-card">
+                    <div class="section-divider">
+                        <span class="section-divider-text">Documents PDF</span>
+                    </div>
+                    
+                    <div class="pdf-scroll-container">
+                        <div class="pdf-card">
+                            <span class="pdf-badge">Nouveau</span>
+                            <h5 class="pdf-title">Livret d'accueil CEREMADE</h5>
+                            <p class="pdf-meta">Septembre 2024 • 2.4 Mo</p>
+                            <a href="docs/livret-accueil.pdf" class="btn-download" download>
+                                <i class="bi bi-download"></i> Télécharger
+                            </a>
+                        </div>
+                        
+                        <div class="pdf-card">
+                            <span class="pdf-badge">Important</span>
+                            <h5 class="pdf-title">Règlement Intérieur</h5>
+                            <p class="pdf-meta">Version 2024 • 1.8 Mo</p>
+                            <a href="docs/reglement-interieur.pdf" class="btn-download" download>
+                                <i class="bi bi-download"></i> Télécharger
+                            </a>
+                        </div>
+                        
+                        <div class="pdf-card">
+                            <h5 class="pdf-title">Charte Informatique</h5>
+                            <p class="pdf-meta">1.2 Mo</p>
+                            <a href="docs/charte-info.pdf" class="btn-download" download>
+                                <i class="bi bi-download"></i> Télécharger
+                            </a>
+                        </div>
+                        
+                        <div class="pdf-card">
+                            <h5 class="pdf-title">Politique de voyage</h5>
+                            <p class="pdf-meta">Université Paris-Dauphine • 0.9 Mo</p>
+                            <a href="docs/politique-voyage.pdf" class="btn-download" download>
+                                <i class="bi bi-download"></i> Télécharger
+                            </a>
+                        </div>
+                        
+                        <div class="pdf-card">
+                            <h5 class="pdf-title">Service Informatique</h5>
+                            <p class="pdf-meta">262 ko</p>
+                            <a href="https://www.ceremade.dauphine.fr/intranet/data/medias/si/presentation_au_labo.pdf" class="btn-download" download>
+                                <i class="bi bi-download"></i> Télécharger
+                            </a>
+                        </div>
+                        
+                        <div class="pdf-card">
+                            <h5 class="pdf-title">Document DFIS</h5>
+                            <p class="pdf-meta">2.7 Mo</p>
+                            <a href="https://www.ceremade.dauphine.fr/intranet/data/medias/si/dfis.pdf" class="btn-download" download>
+                                <i class="bi bi-download"></i> Télécharger
+                            </a>
+                        </div>
+                        
+                        <div class="pdf-card">
+                            <h5 class="pdf-title">Procédures CNRS</h5>
+                            <p class="pdf-meta">1.5 Mo</p>
+                            <a href="docs/procedures-cnrs.pdf" class="btn-download" download>
+                                <i class="bi bi-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary px-4 py-2" data-bs-toggle="modal" data-bs-target="#allPdfModal" style="background: var(--math-orange); border: none;">
+                            <i class="bi bi-archive me-2"></i>Voir tous les documents
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Modals -->
+{% include "partials/modals.html" %}
+{% endblock %}

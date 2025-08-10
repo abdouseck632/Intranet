@@ -1,0 +1,375 @@
+:root {
+    --primary-dark: #0d2b4e;
+    --primary-medium: #1a4a7a;
+    --primary-light: #2a6baa;
+    --accent-blue: #4da6ff;
+    --math-orange: #ff6b35;
+    --light-bg: #f5f9ff;
+    --card-shadow: 0 8px 30px rgba(13,43,78,0.1);
+    --danger-red: #dc3545;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #f5f9ff 0%, #e6f0ff 100%);
+    color: #333;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(74, 144, 226, 0.08) 0%, transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(255, 107, 53, 0.08) 0%, transparent 25%),
+        linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Nouveau style de points en dégradé */
+.dot-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(74, 144, 226, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 90% 80%, rgba(255, 107, 53, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+    pointer-events: none;
+}
+main {
+    flex: 1; /* Prend tout l'espace disponible */
+    padding-bottom: 60px; /* Espace pour le footer */
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Hauteur du footer */
+    background-color: var(--primary-dark);
+    color: white;
+    z-index: 1000;
+}
+
+/* Menu blanc avec dégradé */
+.navbar {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Dégradé sous le carousel */
+.gradient-after-carousel {
+    
+}
+
+.navbar-brand img {
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: rotate(-5deg);
+}
+
+.nav-link {
+    color: var(--primary-dark) !important;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 6px;
+    margin: 0 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(13, 43, 78, 0.1);
+}
+
+.nav-link.active {
+    background-color: rgba(16, 121, 241, 0.2);
+}
+
+/* Style pour le menu à gauche */
+.left-menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Style pour la déconnexion à droite */
+.right-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.right-links a {
+    color: var(--danger-red);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.right-links a:hover {
+    color: #c82333;
+}
+
+.theme-section {
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--math-orange), var(--accent-blue));
+}
+
+.theme-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,46,109,0.15);
+}
+
+.section-header {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary-medium));
+    color: white;
+    padding: 18px 25px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.section-header i {
+    font-size: 1.4rem;
+    margin-right: 12px;
+}
+
+.section-body {
+    padding: 25px;
+}
+
+.pdf-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--accent-blue);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.pdf-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0), white);
+}
+
+.pdf-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,46,109,0.12);
+}
+
+.pdf-badge {
+    background: var(--math-orange);
+    color: white;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    align-self: flex-start;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.pdf-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--primary-dark);
+}
+
+.pdf-meta {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 12px;
+}
+
+.btn-download {
+    background: var(--primary-medium);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    align-self: flex-start;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-download:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-download i {
+    margin-right: 6px;
+}
+
+.btn-theme {
+    background: white;
+    color: var(--primary-dark);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-theme:hover {
+    background: var(--light-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-color: var(--accent-blue);
+}
+
+.btn-theme i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: var(--primary-medium);
+}
+
+.modal-header {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary-medium));
+    color: white;
+}
+
+.pdf-column {
+    position: sticky;
+    top: 20px;
+}
+
+@media (max-width: 992px) {
+    .pdf-column {
+        position: static;
+        margin-bottom: 40px;
+    }
+}
+
+/* Carousel */
+.carousel {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    margin-bottom: 0;
+}
+
+.carousel-item img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/* Séparateurs */
+.section-divider {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    color: var(--primary-medium);
+}
+
+.section-divider::before, .section-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px dashed rgba(42,90,140,0.3);
+}
+
+.section-divider-text {
+    padding: 0 20px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+/* Délais d'animation */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+
+/* Scroll personnalisé pour les PDF */
+.pdf-scroll-container {
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.pdf-scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.pdf-scroll-container::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+
+.pdf-scroll-container::-webkit-scrollbar-thumb {
+    background: var(--primary-medium);
+    border-radius: 10px;
+}
+/* Ajoutez ici tous les autres styles CSS que vous aviez */
