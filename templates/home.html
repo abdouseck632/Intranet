@@ -46,91 +46,144 @@
     <div class="container py-5">
         <div class="row">
             <!-- Colonne de gauche - Thèmes -->
-            <div class="col-lg-8">
-                <div class="section-divider">
-                    <span class="section-divider-text">Services et Ressources</span>
-                </div>
-                
-                <!-- Ressources Informatiques -->
-                <div class="theme-section animate-card delay-1">
-                    <div class="section-header">
-                        <i class="bi bi-laptop"></i>
-                        <span>Ressources Informatiques</span>
+             <div class="col-lg-8">
+        <div class="section-divider">
+            <span class="section-divider-text">Services et Ressources</span>
+        </div>
+        <!-- 2. Informatique & Communication -->
+        <div class="theme-section animate-card delay-2">
+            <div class="section-header">
+                <i class="bi bi-laptop-fill"></i>
+                <span>Informatique & Communication</span>
+            </div>
+            <div class="section-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn-theme" data-bs-toggle="modal" data-bs-target="#serviceInfoModal">
+                            <i class="bi bi-gear-fill"></i>
+                            <span>Organisation du service informatique</span>
+                        </button>
                     </div>
-                    <div class="section-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <button class="btn-theme" data-bs-toggle="modal" data-bs-target="#aliasModal">
-                                    <i class="bi bi-at"></i>
-                                    <span>Liste des alias email</span>
-                                </button>
-                            </div>
-                            <div class="col-md-6">
-                                <a class="btn-theme" href="https://doc.lab.fr" target="_blank">
-                                    <i class="bi bi-exclamation-triangle"></i>
-                                    <span>Déclarer un incident</span>
-                                </a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="https://doc.lab.fr" class="btn-theme" target="_blank">
-                                    <i class="bi bi-book"></i>
-                                    <span>Documentation</span>
-                                </a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="https://video.lab.fr" class="btn-theme" target="_blank">
-                                    <i class="bi bi-play-circle"></i>
-                                    <span>Vidéos tutoriels</span>
-                                </a>
-                            </div>
-                        </div>
+                    <div class="col-md-6">
+                        <a class="btn-theme" href="https://doc.lab.fr" target="_blank">
+                            <i class="bi bi-exclamation-triangle-fill"></i>
+                            <span>Déclarer un incident</span>
+                        </a>
                     </div>
-                </div>
-
-                <!-- Hygiène & Sécurité -->
-                <div class="theme-section animate-card delay-2">
-                    <div class="section-header">
-                        <i class="bi bi-shield-check"></i>
-                        <span>Hygiène & Sécurité</span>
+                    <div class="col-md-6">
+                        <a href="https://doc.lab.fr" class="btn-theme" target="_blank">
+                            <i class="bi bi-book-fill"></i>
+                            <span>Documentation informatique</span>
+                        </a>
                     </div>
-                    <div class="section-body">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <button class="btn-theme" data-bs-toggle="modal" data-bs-target="#hygieneModal">
-                                    <i class="bi bi-file-text"></i>
-                                    <span>Consignes</span>
-                                </button>
-                            </div>
-                            <div class="col-md-4">
-                                <button class="btn-theme">
-                                    <i class="bi bi-people"></i>
-                                    <span>Chargés d'évacuation</span>
-                                </button>
-                            </div>
-                            <div class="col-md-4">
-                                <button class="btn-theme">
-                                    <i class="bi bi-file-earmark-medical"></i>
-                                    <span>Rapports</span>
-                                </button>
-                            </div>
-                        </div>
+                    <div class="col-md-6">
+                        <a href="https://video.lab.fr" class="btn-theme" target="_blank">
+                            <i class="bi bi-play-circle-fill"></i>
+                            <span>Vidéos tutoriels informatique</span>
+                        </a>
                     </div>
-                </div>
-
-                <!-- Instances du laboratoire -->
-                <div class="theme-section animate-card delay-3">
-                    <div class="section-header">
-                        <i class="bi bi-building"></i>
-                        <span>Instances du laboratoire</span>
+                    <div class="col-md-6">
+                        <button class="btn-theme" data-bs-toggle="modal" data-bs-target="#aliasModal">
+                            <i class="bi bi-at"></i>
+                            <span>Liste des alias email</span>
+                        </button>
                     </div>
-                    <div class="section-body">
-                        <button class="btn-theme" data-bs-toggle="modal" data-bs-target="#conseilModal">
-                            <i class="bi bi-person-lines-fill"></i>
-                            <span>Composition du Conseil</span>
+                    <div class="col-md-6">
+                        <button class="btn-theme">
+                            <i class="bi bi-unlock-fill"></i>
+                            <span>Autorisation d'accès</span>
                         </button>
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- 1. Administration & Gouvernance -->
+        <div class="theme-section animate-card delay-1">
+            <div class="section-header">
+                <i class="bi bi-building-fill"></i>
+                <span>Administration , Gouvernance & Sécurité</span>
+            </div>
+            <div class="section-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn-theme" data-bs-toggle="modal" data-bs-target="#secretariatModal">
+                            <i class="bi bi-person-badge-fill"></i>
+                            <span>Présentation du secrétariat</span>
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn-theme" data-bs-toggle="modal" data-bs-target="#conseilModal">
+                            <i class="bi bi-people-fill"></i>
+                            <span>Conseil et AG</span>
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="docs/mission-cnrs.pdf" class="btn-theme" target="_blank">
+                            <i class="bi bi-briefcase-fill"></i>
+                            <span>Mission CNRS</span>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="docs/politique-voyage.pdf" class="btn-theme" target="_blank">
+                            <i class="bi bi-airplane-fill"></i>
+                            <span>Politiques de voyages</span>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn-theme" data-bs-toggle="modal" data-bs-target="#instanceModal">
+                            <i class="bi bi-people-fill"></i>
+                            <span>Instance du labo</span>
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn-theme" data-bs-toggle="modal" data-bs-target="#hygieneModal">
+                            <i class="bi bi-shield-fill-check"></i>
+                            <span>Hygiène et sécurité</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- 3. Reprographie, Documents & Sécurité -->
+        <div class="theme-section animate-card delay-3">
+            <div class="section-header">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span>Reprographie & Signatures </span>
+            </div>
+            <div class="section-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="docs/reprographie.pdf" class="btn-theme" target="_blank">
+                            <i class="bi bi-files-fill"></i>
+                            <span>Reprographie (thèses & HDR)</span>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="docs/signature-articles.pdf" class="btn-theme" target="_blank">
+                            <i class="bi bi-pencil-square-fill"></i>
+                            <span>Signature des articles</span>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="docs/docs-utils.pdf" class="btn-theme" target="_blank">
+                            <i class="bi bi-folder-fill"></i>
+                            <span>Docs utils</span>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="docs/logos-labo.pdf" class="btn-theme" target="_blank">
+                            <i class="bi bi-image-fill"></i>
+                            <span>Logos du labo</span>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
             
             <!-- Colonne de droite - PDF -->
             <div class="col-lg-4 pdf-column">

@@ -305,6 +305,19 @@ footer {
         margin-bottom: 40px;
     }
 }
+ .profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #4CAF50;
+    padding: 2px;
+  }
+  .role-badges .badge {
+    font-size: 0.85rem;
+  }
 
 /* Carousel */
 .carousel {
@@ -315,7 +328,7 @@ footer {
 }
 
 .carousel-item img {
-    height: 300px;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -367,7 +380,7 @@ footer {
 
 /* Scroll personnalisé pour les PDF */
 .pdf-scroll-container {
-    max-height: 600px;
+    max-height: 700px;
     overflow-y: auto;
     padding-right: 10px;
 }
