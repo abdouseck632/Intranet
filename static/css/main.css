@@ -380,7 +380,7 @@ footer {
 
 /* Scroll personnalisé pour les PDF */
 .pdf-scroll-container {
-    max-height: 700px;
+    max-height: 800px;
     overflow-y: auto;
     padding-right: 10px;
 }
